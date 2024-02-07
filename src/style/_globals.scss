@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #272F68;
+  --secondary: #6D78DF;
+  --accent: #1428DB;
+  --text: #101113;
+  --bg-color: #E9E9F2;
+  background-color: var(--bg-color);
+  color: var(--text);
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 0.2px;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--bg-color);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.3s;
+  &:hover {
+    color: var(--primary);
+    transition: color 0.3s;
+  }
+}
