@@ -1,0 +1,16 @@
+@use '@/style/variables' as *;
+
+.button {
+    cursor: pointer;
+    border-radius: $radius;
+    border: 0;
+    padding: .5rem 1rem;
+    box-shadow: $shadow; 
+    background-color: var(--primary);
+    color: var(--background);
+    transition: $animation-seconds;
+    &:hover {
+        opacity: $opacity;
+        transition: $animation-seconds;
+    }
+}
