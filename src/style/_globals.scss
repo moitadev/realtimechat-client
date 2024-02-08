@@ -7,12 +7,14 @@
 }
 
 :root {
-  --primary: #272F68;
-  --secondary: #6D78DF;
-  --accent: #1428DB;
-  --text: #101113;
-  --bg-color: #E9E9F2;
-  background-color: var(--bg-color);
+  --text: hsl(220, 9%, 7%);
+  --background: hsl(240, 26%, 93%);
+  --primary: hsl(233, 45%, 28%);
+  --secondary: hsl(234, 64%, 65%);
+  --accent: hsl(234, 83%, 47%);
+  --white: #fff;
+  --black: #000;
+  background-color: var(--background);
   color: var(--text);
   transition: all 0.3s ease-in-out;
   letter-spacing: 0.2px;
@@ -20,7 +22,7 @@
 
 ::selection {
   background-color: var(--primary);
-  color: var(--bg-color);
+  color: var(--background);
 }
 
 a {
