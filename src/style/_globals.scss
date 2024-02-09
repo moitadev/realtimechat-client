@@ -7,21 +7,32 @@
 }
 
 :root {
-  --text: hsl(220, 9%, 7%);
-  --background: hsl(240, 26%, 93%);
-  --primary: hsl(233, 45%, 28%);
-  --secondary: hsl(234, 64%, 65%);
-  --accent: hsl(234, 83%, 47%);
+  --text: #050316;
+  --background: #fbfbfe;
+  --primary: #2f27ce;
+  --secondary: #dddbff;
+  --accent: #443dff;
   --white: #fff;
   --black: #000;
   background-color: var(--background);
   color: var(--text);
   transition: all 0.3s ease-in-out;
   letter-spacing: 0.2px;
+  &.dark {
+    --text: #ebe9fc;
+    --background: #010104;
+    --primary: #3a31d8;
+    --secondary: #020024;
+    --accent: #0600c2;
+  }
+}
+
+body {
+  min-height: 100dvh;
 }
 
 ::selection {
-  background-color: var(--primary);
+  background-color: var(--text);
   color: var(--background);
 }
 
@@ -31,7 +42,7 @@ a {
   color: var(--text);
   transition: color 0.3s;
   &:hover {
-    color: var(--primary);
+    color: var(--secondary);
     transition: color 0.3s;
   }
 }
