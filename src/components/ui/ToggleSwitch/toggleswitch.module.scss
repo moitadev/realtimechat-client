@@ -1,0 +1,50 @@
+@use '@/style/variables' as *;
+
+.toggleSwitch {
+  width: 45px;
+  position: relative;
+  display: inline-block;
+}
+
+.toggleCheckbox {
+  display: none;
+}
+
+.toggleLabel {
+  display: block;
+  width: 25px;
+  height: 29px;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    width: 55px;
+    background-color: var(--background-300);
+    transition: all 0.5s ;
+  }
+}
+
+.toggleHandle {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 23px;
+  padding: 3px;
+  background-color: var(--primary);
+  color: var(--background);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  animation-name: rotateInverse;
+  animation-duration: 0.3s;
+}
+
+.toggleCheckbox:checked + .toggleLabel .toggleHandle {
+  left: calc(100% - 20px);
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  animation-name: rotate;
+  animation-duration: 0.3s;
+}
