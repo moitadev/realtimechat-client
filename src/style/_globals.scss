@@ -35,3 +35,13 @@ a {
     transition: color 0.3s;
   }
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  li {
+    list-style: none;
+  }
+}
