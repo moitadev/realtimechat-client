@@ -1,0 +1,46 @@
+@use '@/style/variables' as *;
+
+.section {
+  height: 100dvh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  padding: $padding-md;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+ul {
+  li {
+    p {
+      font-weight: bold;
+      cursor: pointer;
+      border-bottom: 1px solid transparent;
+      transition: all $animation-seconds;
+    }
+  }
+}
+
+.active {
+  cursor: default;
+  color: var(--secondary)!important;
+  border-bottom: 1px solid var(--secondary)!important;
+  transition: all $animation-seconds!important;
+}
+
+small {
+  text-align: center;
+  color: #f43f5e;
+  font-weight: bold;
+}
