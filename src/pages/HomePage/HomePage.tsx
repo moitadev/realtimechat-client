@@ -1,23 +1,22 @@
-import { Button, Input } from '@/components';
-import { useAuth } from '@/hooks';
-import { useNavigate } from 'react-router-dom';
+import { Button, Sidebar } from '@/components';
+import { useState } from 'react';
 
 export const HomePage = (): JSX.Element => {
-  const { signOut } = useAuth();
-  const history = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleSignOut = async () => {
-    await signOut();
-    history('/login');
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
   };
-
   return (
     <>
-      <h2>Home</h2>
-      <Input className="pd-lg" placeholder="Digite seu e-mail" />
-      <Button onClick={handleSignOut} className="pd-lg">
-        Sair
-      </Button>
+      <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <Button onClick={toggleSidebar}>Toggle Sidebar</Button>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
