@@ -4,8 +4,8 @@ import './style/styles.scss';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { HomePage, AuthPage } from '@/pages';
-import { AuthProvider } from '@/context';
-import { ProtectedRoute } from '@/components';
+import { AuthProvider, ThemeProvider } from '@/context';
+import { ProtectedRoute, GuestRoute } from '@/components';
 
 const router = createBrowserRouter([
   {
@@ -18,14 +18,20 @@ const router = createBrowserRouter([
   },
   {
     path: '/login',
-    element: <AuthPage />,
+    element: (
+      <GuestRoute>
+        <AuthPage />
+      </GuestRoute>
+    ),
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
