@@ -1,13 +1,14 @@
 @use '@/style/variables' as *;
 
 .input {
-    border-radius: $radius;
-    border: 0;
-    box-shadow: $shadow; 
-    background-color: var(--white);
+  border-radius: $radius;
+  border: 0;
+  box-shadow: $shadow;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  transition: all $animation-seconds;
+  &:focus {
+    outline: 1px solid var(--primary-300);
     transition: all $animation-seconds;
-    &:focus{
-        outline: 1px solid var(--secondary);
-        transition: all $animation-seconds;
-    }
+  }
 }

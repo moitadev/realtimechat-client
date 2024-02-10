@@ -34,8 +34,8 @@ ul {
 
 .active {
   cursor: default;
-  color: var(--secondary)!important;
-  border-bottom: 1px solid var(--secondary)!important;
+  color: var(--primary)!important;
+  border-bottom: 1px solid var(--primary)!important;
   transition: all $animation-seconds!important;
 }
 
