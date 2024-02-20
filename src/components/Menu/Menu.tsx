@@ -1,17 +1,17 @@
-import styles from './sidebar.module.scss';
+import styles from './menu.module.scss';
 import { useAuth } from '@/hooks';
 import { useNavigate } from 'react-router-dom';
 import { Avatar, ToggleSwitch } from '@/components';
 import { PiSignOut, PiX } from 'react-icons/pi';
 
-type SidebarProps = {
+type MenuProps = {
   username?: string;
   status?: string;
   isOpen: boolean;
-  toggleSidebar: () => void;
+  toggleMenu: () => void;
 };
 
-export const Sidebar = ({ username, status, isOpen, toggleSidebar }: SidebarProps) => {
+export const Menu = ({ username, status, isOpen, toggleMenu }: MenuProps) => {
   const { signOut } = useAuth();
   const history = useNavigate();
 
@@ -22,7 +22,7 @@ export const Sidebar = ({ username, status, isOpen, toggleSidebar }: SidebarProp
 
   return (
     <>
-      <section className={`${styles.sidebarSection} ${isOpen ? '' : styles.closed}`}>
+      <section className={`${styles.menuSection} ${isOpen ? '' : styles.closed}`}>
         <div className="container w-full">
           <div className="row justify-space-between">
             <div className="col col-10">
@@ -37,7 +37,7 @@ export const Sidebar = ({ username, status, isOpen, toggleSidebar }: SidebarProp
               </div>
             </div>
             <div className="col col-2">
-              <a className={styles.close} onClick={toggleSidebar}><PiX /></a>
+              <a className={styles.close} onClick={toggleMenu}><PiX /></a>
             </div>
           </div>
         </div>

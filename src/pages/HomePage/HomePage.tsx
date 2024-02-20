@@ -1,19 +1,19 @@
-import { Button, Sidebar } from '@/components';
+import { Button, Menu } from '@/components';
 import { useState } from 'react';
 
 export const HomePage = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleSidebar = () => {
+  const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
   return (
     <>
-      <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="container">
+      <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
+      <div className="container w-full">
         <div className="row">
           <div className="col">
-            <Button onClick={toggleSidebar}>Toggle Sidebar</Button>
+            <Button onClick={toggleMenu}>Toggle Menu</Button>
           </div>
         </div>
       </div>
