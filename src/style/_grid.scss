@@ -18,8 +18,8 @@
 
 @for $i from 1 through 12{
     .col-#{$i}{
-        min-width: (100% / 12) * $i;
-        max-width: (100% / 12) * $i;
+        min-width: calc(100% / 12) * $i;
+        max-width: calc(100% / 12) * $i;
     }
 }
 
@@ -29,4 +29,24 @@
 
 .full-w {
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .col {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .row {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .col {
+        flex: 0 0 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
 }
