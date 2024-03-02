@@ -1,52 +1,59 @@
-.container{
-    max-width: 1320px;
-    padding: 0 20px;
-    margin: 0 auto;
+.container {
+  max-width: 1320px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -15px;
-    width: calc(100% + 20px);
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.col{
-    flex: 1;
-    padding: 10px;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  width: calc(100% + 20px);
 }
 
-@for $i from 1 through 12{
-    .col-#{$i}{
-        min-width: calc(100% / 12) * $i;
-        max-width: calc(100% / 12) * $i;
-    }
+.col {
+  flex: 1;
+  padding: 10px;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    min-width: calc(100% / 12) * $i;
+    max-width: calc(100% / 12) * $i;
+  }
 }
 
 .full-h {
-    height: 100%;
+  height: 100%;
 }
 
 .full-w {
-    width: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
-
-    .col {
-        padding: 5px;
-    }
+  .col {
+    padding: 5px;
+  }
 }
 
 @media screen and (max-width: 576px) {
-    .row {
-        margin-left: 0;
-        width: 100%;
-    }
+  .row {
+    margin-left: 0;
+    width: 100%;
+  }
 
-    .col {
-        flex: 0 0 100%;
-        min-width: 100%;
-        max-width: 100%;
-    }
+  .col {
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
 }

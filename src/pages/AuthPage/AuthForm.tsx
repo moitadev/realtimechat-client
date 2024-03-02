@@ -31,6 +31,7 @@ export const AuthForm = ({ login }: AuthFormProps): JSX.Element => {
       onSubmit={(e) => handleSubmit(e, login ? 'signin' : 'signup')}
       className={styles.form}
     >
+      {!login && <Input name="user" placeholder="Usuário" className="pd-lg" />}
       <Input name="email" placeholder="Email" className="pd-lg" />
       <Input
         name="password"

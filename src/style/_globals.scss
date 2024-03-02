@@ -1,27 +1,6 @@
 :root {
-  --text-50: #eae9fc;
-  --text-100: #d6d2f9;
-  --text-200: #ada5f3;
-  --text-300: #8478ed;
-  --text-400: #5b4be7;
-  --text-500: #321fe0;
-  --text-600: #2818b4;
-  --text-700: #1e1287;
-  --text-800: #140c5a;
-  --text-900: #0a062d;
-  --text-950: #050316;
 
-  --background-50: #ebebfa;
-  --background-100: #d6d6f5;
-  --background-200: #adadeb;
-  --background-300: #8585e0;
-  --background-400: #5c5cd6;
-  --background-500: #3333cc;
-  --background-600: #2929a3;
-  --background-700: #1f1f7a;
-  --background-800: #141452;
-  --background-900: #0a0a29;
-  --background-950: #050514;
+  --background-50: #f5f5f4;
 
   --primary-50: #eaeafb;
   --primary-100: #d6d4f7;
@@ -47,52 +26,20 @@
   --secondary-900: #030033;
   --secondary-950: #01001a;
 
-  --accent-50: #e6e5ff;
-  --accent-100: #ceccff;
-  --accent-200: #9c99ff;
-  --accent-300: #6b66ff;
-  --accent-400: #3a33ff;
-  --accent-500: #0800ff;
-  --accent-600: #0700cc;
-  --accent-700: #050099;
-  --accent-800: #030066;
-  --accent-900: #020033;
-  --accent-950: #01001a;
   --text: #050316;
-  --background: #fbfbfe;
+  --background: #fefefe;
   --primary: #2f27ce;
-  --secondary: #dddbff;
-  --accent: #443dff;
+  --secondary: #999;
+  --accent: #e9e9ea;
   --white: #fff;
   --black: #000;
-  background-color: var(--background-50);
+  background-color: var(--background);
   color: var(--text);
   transition: all 0.3s ease-in-out;
   letter-spacing: 0.2px;
   &.dark {
-    --text-50: #040316;
-    --text-100: #08062d;
-    --text-200: #100c5a;
-    --text-300: #181287;
-    --text-400: #2018b4;
-    --text-500: #281fe0;
-    --text-600: #534be7;
-    --text-700: #7e78ed;
-    --text-800: #a9a5f3;
-    --text-900: #d4d2f9;
-    --text-950: #eae9fc;
 
-    --background-50: #050514;
-    --background-100: #0a0a29;
-    --background-200: #141452;
-    --background-300: #1f1f7a;
-    --background-400: #2929a3;
-    --background-500: #3333cc;
-    --background-600: #5c5cd6;
-    --background-700: #8585e0;
-    --background-800: #adadeb;
-    --background-900: #d6d6f5;
-    --background-950: #ebebfa;
+    --background-50: #1a1a1a;
 
     --primary-50: #050415;
     --primary-100: #0a082b;
@@ -118,22 +65,11 @@
     --secondary-900: #cfccff;
     --secondary-950: #e7e5ff;
 
-    --accent-50: #01001a;
-    --accent-100: #020033;
-    --accent-200: #030066;
-    --accent-300: #050099;
-    --accent-400: #0700cc;
-    --accent-500: #0800ff;
-    --accent-600: #3a33ff;
-    --accent-700: #6b66ff;
-    --accent-800: #9c99ff;
-    --accent-900: #ceccff;
-    --accent-950: #e6e5ff;
     --text: #ebe9fc;
-    --background: #010104;
+    --background: #171717;
     --primary: #3a31d8;
-    --secondary: #020024;
-    --accent: #0600c2;
+    --secondary: #868e99;
+    --accent: #333;
   }
 }
 
@@ -145,6 +81,35 @@
 
 body {
   min-height: 100dvh;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-700);
+  border: 0px none;
+  border-radius: 19px;
+  &:hover {
+    background: var(--secondary-800);
+  }
+  &:active {
+    background: var(--secondary-900);
+  }
+}
+::-webkit-scrollbar-track {
+  background: var(--background-300);
+  border: 0px none #fff;
+  border-radius: 55px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 ::selection {
