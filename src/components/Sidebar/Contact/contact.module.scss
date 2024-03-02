@@ -1,0 +1,14 @@
+.contactWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    .textWrapper {
+        .name {
+            font-weight: bold;
+        }
+        .message {
+            color: rgba($color: var(--text-950), $alpha: .2);
+        }
+    }
+}
