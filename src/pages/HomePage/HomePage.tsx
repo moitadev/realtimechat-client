@@ -1,4 +1,4 @@
-import { Menu, Sidebar } from '@/components';
+import { Menu, Sidebar, Main } from '@/components';
 import { useState } from 'react';
 
 export const HomePage = (): JSX.Element => {
@@ -12,11 +12,9 @@ export const HomePage = (): JSX.Element => {
       <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
       <div className="container-fluid">
         <div className="row">
-          <div className="col col-3">
-            <Sidebar />
-          </div>
-          <div className="col col-9">
-            <a onClick={toggleMenu}>Toggle Menu</a>
+          <Sidebar toggleMenu={toggleMenu} />
+          <div className="col col-10">
+            <Main />
           </div>
         </div>
       </div>
