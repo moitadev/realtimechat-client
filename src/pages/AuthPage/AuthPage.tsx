@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { AuthForm } from './AuthForm';
-import styles from './authpage.module.scss';
+import { useState } from 'react'
+import { AuthForm } from './AuthForm'
+import styles from './authpage.module.scss'
 
 export const AuthPage = (): JSX.Element => {
-  const [login, setLogin] = useState(true);
+  const [login, setLogin] = useState(true)
   return (
     <section className={styles.section}>
       <div className="container full-h">
@@ -13,10 +13,20 @@ export const AuthPage = (): JSX.Element => {
               <h2>{login ? 'Bem-vindo!' : 'Registre-se!'}</h2>
               <ul>
                 <li>
-                  <p className={login ? `${styles.active}` : ''} onClick={()=>setLogin(true)}>Entrar</p>
+                  <p
+                    className={login ? `${styles.active}` : ''}
+                    onClick={() => setLogin(true)}
+                  >
+                    Entrar
+                  </p>
                 </li>
                 <li>
-                  <p className={login ? '' : `${styles.active}`} onClick={()=>setLogin(false)}>Cadastrar</p>
+                  <p
+                    className={login ? '' : `${styles.active}`}
+                    onClick={() => setLogin(false)}
+                  >
+                    Cadastrar
+                  </p>
                 </li>
               </ul>
               <AuthForm login={login} />
@@ -25,5 +35,5 @@ export const AuthPage = (): JSX.Element => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
