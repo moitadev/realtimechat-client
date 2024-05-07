@@ -1,34 +1,36 @@
-.sidebar {
-    width: 100%;
+.wrapper {
+  background-color: var(--background-50);
+  margin-top: -10px;
+  margin-left: -10px;
+  padding-right: 0;
+  border-right: 1px solid var(--accent);
+  .sidebar {
     padding: 10px;
-    margin-top: -10px;
-    margin-left: -10px;
-    background-color: var(--background-50);
+    width: 100%;
     min-height: 100dvh;
     max-height: 100%;
-    border-right: 1px solid var(--accent);
     display: flex;
     flex-direction: column;
     gap: 20px;
     .sidebarHeader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      a {
+        font-size: 28px;
         display: flex;
-        justify-content: center;
         align-items: center;
-        gap: 10px;
-        a {
-            font-size: 28px;
-            display: flex;
-            align-items: center;
-        }
+      }
     }
     .contactList {
-        width: 100%;
-        height: 100%;
-        max-height: calc(100dvh - 60px);
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        overflow: auto;
+      width: 100%;
+      height: 100%;
+      max-height: calc(100dvh - 60px);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      overflow: auto;
     }
+  }
 }
-

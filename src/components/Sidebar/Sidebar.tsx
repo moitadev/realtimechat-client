@@ -1,19 +1,25 @@
-import styles from './sidebar.module.scss';
-import { PiSliders } from 'react-icons/pi';
-import {Contact, Search} from '@/components'
+import styles from './sidebar.module.scss'
+import { PiSliders } from 'react-icons/pi'
+import { Contact, Search } from '@/components'
 
-export const Sidebar = () => {
+type SidebarProps = {
+  toggleMenu: () => void
+}
+
+export const Sidebar = ({ toggleMenu }: SidebarProps) => {
   return (
-    <>
+    <div className={`col col-2 ${styles.wrapper}`}>
       <div className={styles.sidebar}>
         <div className={styles.sidebarHeader}>
-          <a><PiSliders /></a>
+          <a onClick={toggleMenu}>
+            <PiSliders />
+          </a>
           <Search />
         </div>
         <div className={styles.contactList}>
-            <Contact />
+          <Contact />
         </div>
       </div>
-    </>
-  );
-};
+    </div>
+  )
+}
