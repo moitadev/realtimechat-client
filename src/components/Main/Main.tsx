@@ -1,8 +1,11 @@
+import styles from './Main.module.scss'
+import { Chat } from "@/components"
+
 const Main = () => {
     return (
-        <>
-            Chat
-        </>
+        <div className={styles.mainWrapper}>
+            <Chat />
+        </div>
     )
 }
 
