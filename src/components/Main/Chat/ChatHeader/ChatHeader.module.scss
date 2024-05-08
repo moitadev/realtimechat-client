@@ -1,0 +1,19 @@
+.wrapper {
+  background-color: var(--accent);
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  .nameWrapper {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    p {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+  }
+}
