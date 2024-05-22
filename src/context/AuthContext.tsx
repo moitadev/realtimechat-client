@@ -10,7 +10,7 @@ type AuthProviderProps = PropsWithChildren
 
 type FirebaseUser = {
   uid: string | null
-  email: string | null
+  email: string | null | undefined
   displayName?: string | null
   photoURL?: string | null
 }
